@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Biografía</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      transition: background-color 0.5s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 18px;
+      text-align: justify;
+      max-width: 800px;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn-cambiar {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .btn-cambiar:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sobre mí</h1>
+  <p>
+    Hola, mi nombre es Dilan Hernandez. Me considero una persona apasionada por la tecnología.  
+    Mis hobbies incluyen jugar videojuegos, programar pequeños proyectos y andar en moto.  
+    Mis metas a corto plazo son mejorar mis habilidades de programación y conocimiento en redes.  
+    A mediano plazo,alcanzar un nivel de inglés suficiente para leer documentación y comunicarte.
+    A largo plazo,terminar la carrera y emprender mi propia empresa especializada en servidores.  
+    Estoy estudiando Ingeniería en Sistemas porque me apasiona la tecnologia 
+    y porque creo que la tecnología es una herramienta clave para transformar el mundo.
+  </p>
+
+  <button class="btn-cambiar" onclick="cambiarColor()">Cambiar color de fondo</button>
+
+  <script>
+    function cambiarColor() {
+      const colores = ["#f4f4f9", "#ffeaa7", "#dfe6e9", "#fab1a0", "#81ecec", "#55efc4", "#a29bfe"];
+      const random = Math.floor(Math.random() * colores.length);
+      document.body.style.backgroundColor = colores[random];
+    }
+  </script>
+</body>
+</html>
