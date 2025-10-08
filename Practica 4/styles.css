@@ -1,0 +1,24 @@
+body {
+    background-color: #5d9918;
+    background-image: linear-gradient(19deg, #000000 0%, #747075 100%);
+    height: 100vh;
+}
+ 
+.container {
+    max-width: 500px;
+}
+ 
+input[type=text],
+input[type=text]:focus {
+    color: #fff;
+    border: none;
+    background:  rgb(0, 0, 0);
+}
+ 
+.to-dos li {
+    background: rgba(0, 0, 0, 0.788);
+}
+ 
+.delete {
+    cursor: pointer;
+}
