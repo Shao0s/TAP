@@ -1,0 +1,193 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+  background-image: linear-gradient(to left, rgb(112, 106, 112), rgb(0, 0, 0));
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#calculadora table{
+	border-collapse: collapse;
+}
+
+#calculadora table{
+	height: 300px;
+}
+
+#calculadora button,
+#calculadora input{
+	width: 100%;
+	height: 100%;
+	font-size: 1em;
+	padding: 10px
+}
+
+#calculadora input{
+	padding: 15px;
+	color: rgb(0, 0, 0);
+	border: none;
+	background-color: rgb(248, 247, 247);
+}
+
+#calculadora input:focus{
+	outline: none;
+}
+
+#calculadora button{
+	background-color: rgba(238, 30, 210, 0.575);
+	border: none;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/*Cambiar color al pasar el mouse*/
+#calculadora button:hover,
+#calculadora button.operacion:hover,
+#calculadora button.operacion#igual:hover,
+#calculadora button.operacion#clear:hover{
+	background-color: rgba(110, 107, 107, 0.5);
+}
+
+#calculadora button {
+  transition: background-color 1.0s ease;
+}
+
+#calculadora button:focus{
+	outline: none;
+}
+
+#calculadora button.operacion{
+	background-color: rgb(86, 187, 66);
+}
+
+
+#calculadora button.operacion#igual,
+#calculadora button.operacion#clear{
+	background-color: rgba(209, 46, 34, 0.712);
+   
+}
+
+   /* ----- Menú desplegable del engranaje ----- */
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hacer que el contenedor ocupe toda la celda */
+.menu-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hacer que el botón del engranaje ocupe todo el contenedor */
+.menu-container button {
+  width: 100%;
+  height: 100%;
+  font-size: 1em; /* mismo tamaño que los demás botones */
+  background-color: rgba(0, 0, 0, .4);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-container button:hover {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+/* Ajustar el tamaño del ícono */
+.menu-container i {
+  font-size: 1.2em;
+}
+
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #f1f1f1;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  padding: 5px 0;
+  border-radius: 5px;
+  z-index: 1;
+  list-style: none;
+}
+
+.menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background-color: #ddd;
+}
+
+/* ----- Historial (textarea) ----- */
+#historial-textarea {
+  background-color: #fff;  /* fondo blanco por defecto */
+  color: #000;             /* texto negro por defecto */
+  width: 500px;            /* ancho deseado */
+  height: 25px;            /* altura de una línea */
+  overflow-y: auto;        /* scroll si hay muchas operaciones */
+  margin: 0 auto;          /* centrar horizontalmente */
+  display: block;          /* necesario para centrar con margin auto */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Historial en modo oscuro */
+.dark-mode #historial-textarea {
+  background-color: #000;  /* fondo negro */
+  color: #fff;             /* texto blanco */
+  border: 1px solid #555;  /* borde más visible en oscuro */
+}
+
+
+/* ----- Modo oscuro general ----- */
+.dark-mode body {
+  background-color: #121212; /* fondo general oscuro */
+  color: #fff; /* texto claro por defecto */
+}
+
+/* ----- Inputs y botones generales ----- */
+.dark-mode #calculadora input,
+.dark-mode #calculadora button {
+  background-color: #000; /* fondo negro */
+  color: #fff; /* texto blanco */
+}
+
+/* ----- Botones especiales ----- */
+.dark-mode #calculadora button.operacion#clear {
+  background-color: crimson; /* C sigue rojo */
+  color: white;
+}
+
+.dark-mode #calculadora button.operacion#igual {
+  background-color: green; /* = sigue verde */
+  color: white;
+}
+
+/* ----- Hover (opcional) ----- */
+.dark-mode #calculadora button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ----- Input hover/focus ----- */
+.dark-mode #calculadora input {
+  background-color: #111;
+  color: white;
+}
+
+.dark-mode #calculadora input:focus {
+  outline: none;
+}
+
+
