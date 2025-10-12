@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+    <!-- Aquí cargas el CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Aquí cargas el icono del menu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+<form id="calculadora"  style="display:flex; flex-direction:column; align-items:center;">
+
+  <textarea id="historial-textarea" rows="5" readonly 
+    style="display:none; width:350px; height:100px; overflow-y:auto; margin-bottom:10px;"></textarea>
+  <table>
+    
+    <tr>
+      
+      <td colspan="4"><input type="text" readonly id="resultado"></td>
+    </tr>
+    <tr>
+      <td><button type="button" id="clear" class="operacion">C</button></td>
+      <td><button type="button" id="dividir" class="operacion">/</button></td>
+      <td><button type="button" id="multiplicar" class="operacion">X</button></td>
+      <!-- Boton del menu -->
+      <td>
+  <div class="menu-container">
+    <button type="button" id="menu-btn"><i class="fas fa-cog"></i></button>
+    <ul class="menu">
+      <li id="modo-oscuro">Modo oscuro</li>
+      <li id="ver-historial">Ver historial</li>
+      <li id="borrar-historial">Borrar historial</li>
+      <!-- mostrar resultado -->
+       
+    </ul>
+  </div>
+</td>
+
+    </tr>
+    <tr>
+      <td><button type="button">1</button></td>
+      <td><button type="button">2</button></td>
+      <td><button type="button">3</button></td>
+      <td><button type="button" id="restar" class="operacion">-</button></td>
+    </tr>
+    <tr>
+      <td><button type="button">4</button></td>
+      <td><button type="button">5</button></td>
+      <td><button type="button">6</button></td>
+      <td><button type="button" id="sumar" class="operacion">+</button></td>
+    </tr>
+    <tr>
+      <td><button type="button">7</button></td>
+      <td><button type="button">8</button></td>
+      <td><button type="button">9</button></td>
+       <td rowspan="2"><button type="button" id="igual"  class="operacion">=</button></td>
+    </tr>
+    <tr>
+      <td colspan="2"><button type="button">0</button></td>
+      <td><button type="button">.</button></td>
+     
+      </tr>
+     </table>
+    </form>
+    <!-- Aquí cargas el JavaScript -->    
+  <script src="app.js"></script>
+</body>
+</html>
